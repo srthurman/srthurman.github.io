@@ -3,13 +3,13 @@ $(document).ready(function(){
 	body = $("body");
 
 	/*
-	 * Append dynamic content to the skill list and portfolio
+	 * Append dynamic content to the skill list and resume
 	*/ 
 
 	$(".skill-list-2").append('<div class="label-beginner">Beginner</div><div class="label-inter">Intermediate</div><div class="label-adv">Advanced</div><div class="label-guru">Guru</div><div class="line-beginner"></div><div class="line-inter"></div><div class="line-adv"></div><div class="line-guru"></div>');
 
-	$(".portfolio__grid__item__img").append('<div class="portfolio__grid__item__mask"></div>');
-	$(".portfolio__detail").append('<div class="portfolio__detail__close"><span class="icon-cross"></span></div>');
+	//$(".resume__grid__item__img").append('<div class="resume__grid__item__mask"></div>');
+	$(".resume__detail").append('<div class="resume__detail__close"><span class="icon-cross"></span></div>');
 
     /* ================== Navigation ================== */
 
@@ -46,23 +46,23 @@ $(document).ready(function(){
 		});
 	});	
 
-	/* ================== Portfolio ================== */
+	/* ================== resume ================== */
 
 	/**
 	 * Scroll effect 
 	*/ 
 
-	posPortfolio = $(".page__portfolio").offset();
-	portfolioDetail = $(".portfolio__detail");
+	posresume = $(".page__resume").offset();
+	resumeDetail = $(".resume__detail");
 
 	scrollEffect();
 
 	function scrollEffect() {
 		posViewport = $(window).scrollTop();
 
-		if ( posViewport > posPortfolio.top-300 && $(window).width() > 1000 ) {
+		if ( posViewport > posresume.top-300 && $(window).width() > 1000 ) {
 			body.addClass("wide-view");
-		} else if (posViewport < posPortfolio.top) {
+		} else if (posViewport < posresume.top) {
 			body.removeClass("wide-view");
 		}
 	}
@@ -72,34 +72,34 @@ $(document).ready(function(){
 	});
 
 	/*
-	 * Detail mode for the portfolio
+	 * Detail mode for the resume
 	*/ 
 
-	$(".portfolio__grid__item__desc__link").click(function(event) {
+	$(".resume__grid__item__desc__link").click(function(event) {
 		event.preventDefault();
 
-		if( body.hasClass("portfolio__detail-active") ) {
-			body.removeClass("portfolio__detail-active");
+		if( body.hasClass("resume__detail-active") ) {
+			body.removeClass("resume__detail-active");
 		} else {
 			// Apply Desc to DOM
-			var activeItem = $(this).parent().parent(".portfolio__grid__item__img");
+			var activeItem = $(this).parent().parent(".resume__grid__item__img");
 			var activeItemImg = activeItem.children("img").attr("src");
-			activeItem.find(".portfolio__detail__desc img:eq(0)").attr("src", activeItemImg);
-			var activeItemDesc = activeItem.children(".portfolio__detail__container").html();
+			activeItem.find(".resume__detail__desc img:eq(0)").attr("src", activeItemImg);
+			var activeItemDesc = activeItem.children(".resume__detail__container").html();
 
-			$(".portfolio__detail .portfolio__detail__desc").remove();
-			portfolioDetail.append(activeItemDesc);
+			$(".resume__detail .resume__detail__desc").remove();
+			resumeDetail.append(activeItemDesc);
 
-			body.addClass("portfolio__detail-active");
+			body.addClass("resume__detail-active");
 
-			$(".portfolio__detail__desc").show();
+			$(".resume__detail__desc").show();
 		}
 	});
 
-	$(".portfolio__detail__close").click(function(){
-		body.removeClass("portfolio__detail-active");
+	$(".resume__detail__close").click(function(){
+		body.removeClass("resume__detail-active");
 		setTimeout(function(){
-			$(".portfolio__detail__desc").slideUp(500);
+			$(".resume__detail__desc").slideUp(500);
 		},800);
 	});
 
