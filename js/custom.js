@@ -53,6 +53,8 @@ $(document).ready(function(){
 	*/ 
 
 	posresume = $(".page__resume").offset();
+	console.log(posresume);
+	console.log(posresume.top);
 	resumeDetail = $(".resume__detail");
 
 	scrollEffect();
@@ -68,7 +70,7 @@ $(document).ready(function(){
 	}
 
 	$(document).scroll(function(){
-		scrollEffect();
+		//scrollEffect();
 	});
 
 	/*

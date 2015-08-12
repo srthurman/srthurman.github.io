@@ -11,9 +11,22 @@
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/user_config.css">
+	<link rel="stylesheet" type="text/css" href="css/panzoom.css">
 	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.css">
 
 	<script src="js/modernizr.min.js"></script>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/raphael-min.js"></script>
+	<script src="js/kartograph.js"></script>
+
+	<script src="js/jquery.qtip.min.js"></script>
+	<script src="js/raphael.pan-zoom.min.js"></script>
+	<script src="js/panzoom.js"></script>
+
+
 
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 	
@@ -97,6 +110,11 @@
 					<p>This is a text about you! Tell your visitor a few details about you as a person: what you do, why you do it? Maybe a short introduction where you come from and what your background is. Tell them the story about how you became the person you are today!</p>
 
 					<p>Here you could build a bridge to the following content. With whom have you worked in the past? What are your clients or colleagues saying about you and your work? <br>Your have numerous elements to structure and organize your content.</p>
+
+					<div id="mapParent" style="position:relative;box-shadow: 0 0 20px #eee;">
+						<div id="map"></div>
+						<!--<div id="mapControls"><a id="up"></a><a id="down"></a></div>-->
+					</div>
 
 				</div>	
 
@@ -287,7 +305,7 @@
 	</main>
 
 	<!-- jquery + additional javascript -->	
-	<script src="js/jquery.min.js"></script>
+
 	<script>
 		Modernizr.load({
 			test: Modernizr.input.placeholder,
