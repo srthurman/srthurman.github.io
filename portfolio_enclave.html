@@ -241,89 +241,95 @@
                 <div>
                     <div class="philophy_text">
                         <h2>Phase 2: Interaction Design</h2>
-                        <h3>Primary Research: Interviews</h3>
-                        <p>I started by interviewing a number of GNC friends and colleagues using the following research guide</p><br>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="single-defination">
-                                    <h4 class="mb-20">Problem Statement</h4>
-                                    <p>The problem I suspect is GNC people feel uncomfortable in public, gendered spaces.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-defination">
-                                    <h4 class="mb-20">Purpose</h4>
-                                    <p>Understand in what spaces trans/non-binary/gender non-conforming people feel comfortable vs uncomfortable.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-defination">
-                                    <h4 class="mb-20">Research Outcome(s)</h4>
-                                    <p>- What public spaces to participants consider gendered?
-- What contributes to participants feeling comfortable vs uncomfortable?
-- How do participants navigate unfamiliar locations?</p>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="col-md-4">
-                                <div class="single-defination">
-                                    <h4 class="mb-20">Method(s)</h4>
-                                    <p>In-person and remote interviews</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-defination">
-                                    <h4 class="mb-20">Measures</h4>
-                                    <p>Location, Ethnicity, Gender Identity</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-defination">
-                                    <h4 class="mb-20">Participants</h4>
-                                    <p>Adults identifying as gender non-conforming, living in a major US city.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <p>Going into the interviews, I recognized that my definition of a "gendered" space may not align with that of my interviewees (you are not the customer!). My definition was an assumption I needed to check, and thus I focused on learning which spaces made my interviewees comfortable vs un-comfortable without any limiting factors on the type. From that I hoped to get insight into what a more encompassing definition of gendered spaces may be.</p>
-                        <br>
-                        <div class="typography">
-                            <h4><strong>Research Insight: </strong>When you're a gender minority, the world is a gendered place.</h4>
-                        </div>
-                        
-                        <p>My interviews revealed that I was indeed off base with my internal definition of gendered spaces. Great! Interviews, like usability tests, are most interesting and valuable when they reveal that you would have gone in the wrong direction without them.</p>
-                        <br>
-                        <h3>Secondary Research: Competitive Analysis</h3>
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="philophy_text">
-                                    <p>I also conducted a competitive analysis of several other services and apps available which allow for sharing information and/or social connections. I utilized a simple 2x2 to organize these competitors by demographic ("For Everyone" vs "GNC specific") and type of sharing ("Social Network" vs "Sharing/Reviews/Ratings"). This analysis was valuable in revealing that there really isn't a product available today geared at GNC people for sharing specific ratings or reviews.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-6">
-                                <div class="philophy_img">
-                                    <img src="img/enclave_competative_analysis.png" alt="#">
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <h3>User Personas</h3>
-                        <p>Based on the interviews and research, I came up with a primary user persona (Alex), which I used to guide the development of the app going forward.</p>
-                        <div class="row align-items-center">
-                            <div class="col-lg-12 col-md-12">
-                                <div class="philophy_img">
-                                    <img src="img/enclave_persona.png" alt="#">
-                                </div>
-                            </div>
-                        </div>
-                        <p>Based on Alex's needs, I also created an updated problem statement</p>
-                        <h4>Alex needs a way to find places other GNC people frequent because those places are most likely to provide a feeling of psychological and physical safety.</h4>
+                            <h3>Design Strategy</h3>
+                                <p>Based on Alex's needs and the offerings in similar apps, I decided on the following list of priorities for the MVP.</p>
+
+                                <p><strong>First, emphasize finding and sharing good experiences over bad.</strong> Good experiences are more actionable than bad. If the world is an unknown place, with a base assumption that any place new could be un-comfortable, then sharing bad experiences doesn't answer the critical question "where should I go?". These will be important, but not a critical feature for the MVP.</p>
+
+                                <p><strong>Second, allow knowing personal details of other reviewers while maintaining anonymity. </strong>This one is a little bit of a "wicked problem". It's important for Alex to understand how much of their background other reviewers share, as that's a proxy for how well those folks experiences will map to Alex's. However, it's also important that Alex not have to provide personally identifiable information (PII) to the app as they're concerned about their privacy.</p>
+
+                                <p><strong>Third, make sharing the minimum amount of useful information in a review as frictionless as possible. </strong>To encourage Alex to give back to the community of other users, I need to define the smallest bit of useful information to share, and make that process as easy as possible.</p>
+
+                            <h3>Information Architecture part 1: User Flow</h3>
+                                <p>In line with the first priority listed above, I developed a primary user flow focused on Alex finding a place they want to go and getting there. This flow is relatively straight forward, but it was still important to understand the decision points Alex will be faced with. Mapping the flow also helps prevent designing a dead end, where users would end up stuck and frustrated.</p>
+
+                                <!-- Insert image here -->
+
+                            <h3>Card Sorting</h3>
+                                <p>Based on the primary flow above, along with the other two MVP priorities, I created a list of ~30 proposed features. I then conducted an open card sort with several (new) GNC folks. Performing an open card sort was important for revealing how people mentally classify the cards, and what specific terms they use. As I saw in the interview stage, limiting folks based on my own ideas for categories could be limiting in ways detrimental to the entire project.</p>
+
+                                <p>You can see the entire list of proposed cards <a href="https://docs.google.com/spreadsheets/d/1PN7DhlaNaHtZYErJBTYdR_DOZG3SdthIpPzBFyWpKzo/edit#gid=0">here</a>.</p>
+
+                            <h3>Information Architecture part 2: Site Map</h3>
+                                <p>I used the groupings that emerged from the card sort to generate a site map proposing the initial information architecture for the app.</p>
+
+                                <!-- Insert sitemap here -->
+
+                            <h3>Wireframing & Prototyping</h3>
+                                <p>Time to start creating prototypes! I started with hand drawn, low-fidelity wireframes to play with ideas for some of the main screens. I took the versions I liked best, and translated those into digital wireframes using Sketch. I then used InVision to create interactive prototypes, in order to evaluate how people engaged with the proposed screens and flows. InVision was a great choice as it allows direct upload of screens from Sketch (with the Craft plugin), and is easy to learn, thus minimizing time needed to set up the prototype itself, and maximizing time available for testing.</p>
+
+                                <!-- Insert side by side images of hand drawn and digital wireframes here -->
+
+                                <p>The product name, Enclave, emerged from reflection on the purpose of the app as serving a niche group of people within the larger culture. </p>
+
+                                <blockquote class="generic-blockquote">
+                                    "a distinct territorial, cultural, or social unit enclosed within or as if within foreign territory"
+                                </blockquote>
                     </div>
                 </div>
             </div>
-        </div>
+    <!-- Phase 2 end -->
+
+    <!-- Phase 3 start -->
+            <div class="row align-items-center justify-content-between">
+                <div>
+                    <div class="philophy_text">
+                        <h2>Phase 3: Usability Testing & Iteration</h2>
+                            <p>The first round of testing was incredibly valuable. It revealed big opportunities for improving the key functionality for the app - sharing "favorites" (aka places where people had good experiences). I was using a 5 star rating system, similar to other apps like Yelp and Google. For Enclave, that ended up not being the best choice for the following reasons:</p>
+                            <ul class="unordered-list">
+                                <li>It's hard to quantify how comfortable someone feels. What does it mean to feel 5 stars vs 2 stars of comfortable or safe?</li>
+                                <li>The app feels like a clone of the other rating apps, but with a few different categories. What's the real differentiator?</li>
+                            </ul>
+
+
+                            <p>I utilized Google's design system, Material Design, with a customized 3 color scheme, to make the jump from grey-scale wireframes into mid-fidelity mockups. Another round of usability tests plus feedback from our instructor revealed some additional information:</p>
+                            <ul class="unordered-list">
+                                <li>Make on-boarding robust. That flow wasn't mapped out initially, but it's absence was a missed opportunity to reinforce who the target audience is.</li>
+                                <li>Some people preferred viewing search results in a list and others the map. Having both those options was a good choice.</li>
+                                <li>The entire friends concept was not important enough for the MVP. I initially thought that would be important for the sharing aspect, but that didn't turn out to be true.</li>
+                            </ul>
+
+                            <h3>Final Version</h3>
+                                <p>Taking into account the results of the usability tests, I iterated on the existing screens and added an onboarding flow.</p>
+
+                                <!-- Insert screen shots of final version here -->
+
+                            <h3>Further Improvements</h3>
+                                <p><strong>Test the untested.</strong> There were elements, like onboarding, that didn't go through a round of usability tests.</p>
+
+                                <p><strong>Niche experience.</strong> If this were a live project and/or the class had lasted a bit longer, at least one more round of iteration would help bring out the ways in which Enclave could really feel like a unique app for a GNC audience.</p>
+
+                                <p><strong>Professional polish.</strong> The final version of my app as of the end of the GA course is a mid-fidelity mockup. It's starting to look and feel real, but doesn't have the polish or visual sophistication of a professional mobile app in 2019. Given time constraints and that my professional background is in analytics and engineering rather than visual design, I had to prioritize working on functionality over UI enhancements.</p>
+                    </div>
+                </div>
+            </div>
+    <!-- Phase 3 end -->
+
+    <!-- Key Takeaways start -->
+            <div class="row align-items-center justify-content-between">
+                <div>
+                    <div class="philophy_text">
+                        <h2>Key Takeaways</h2>
+                            <p><strong>Get frequent feedback from customers.</strong> I can't say for certain what Enclave would have looked like if I had proceeded on only my own instincts without user feedback. Not without inventing a time machine to explore that alternate path, which feels like both overkill and a waste of a time machine. I can say that every time I talked with users, I learned something that helped shift my strategy in ways I wouldn't have come up with solo.</p>
+
+                            <p><strong>Get feedback from others with more experience than you.</strong> One of the most valuable parts about doing the General Assembly course was the regular feedback we got from our instructor, a seasoned Design professional. In addition, the final product was evaluated by a group of other Design and UX pros with decades of experience collectively. All of that input was critical not just in shaping the development of Enclave, but in identifying my own UX strengths and weaknesses to be mindful of as I continue on this path.</p>
+                    </div>
+                </div>
+            </div>
+    <!-- Key Takeaways end -->
+
+
     </section>
-    <!-- philosophy part end -->
 
     <!-- related project part start -->
     <section class="service_part section_padding">
